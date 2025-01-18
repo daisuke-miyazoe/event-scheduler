@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+class EventScraping():
+    def import_event(self):
+        return
