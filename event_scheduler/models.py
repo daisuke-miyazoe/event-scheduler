@@ -18,10 +18,10 @@ class Place(models.Model):
 
 class Event(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True)
-    performer = models.ForeignKey(Performer, on_delete=models.CASCADE)
-    place = models.ForeignKey(Place, on_delete=models.CASCADE)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    performer = models.ForeignKey(Performer, blank=True, null=True, on_delete=models.CASCADE)
+    place = models.ForeignKey(Place, blank=True, null=True, on_delete=models.CASCADE)
+    start_date = models.DateTimeField(blank=True, null=True)
+    end_date = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         verbose_name_plural = "イベント"
